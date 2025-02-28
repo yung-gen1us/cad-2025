@@ -4,11 +4,14 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+@Component("consoleRenderer")
 public class ConsoleTableRenderer  implements Renderer{
     final private ProductProvider provider;
 
-    public ConsoleTableRenderer(ProductProvider provider) {
-        this.provider = provider;
+    public ConsoleTableRenderer(ProductProvider provider1) {
+        this.provider = provider1;
     }
 
     public void render()

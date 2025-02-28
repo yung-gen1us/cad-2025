@@ -3,14 +3,20 @@
  */
 package ru.bsuedu.cad.lab;
 
+import java.util.Arrays;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App {
     
     public static void main(String[] args) {
+        
         ApplicationContext context = new AnnotationConfigApplicationContext(TableConfiguration.class);
-        Renderer renderer = context.getBean("renderer", Renderer.class);
+        // Arrays.stream(context.getBeanDefinitionNames()).forEach(beanName -> System.out.println(beanName));
+        Renderer renderer = context.getBean("htmlRenderer", Renderer.class);
+        
         renderer.render();
+        
     }
 }

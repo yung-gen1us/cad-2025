@@ -2,6 +2,9 @@ package ru.bsuedu.cad.lab;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+@Component("provider")
 public class ConcreteProductProvider implements ProductProvider{
     final private Reader reader;
     final private Parser parser;

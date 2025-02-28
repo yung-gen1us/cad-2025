@@ -8,11 +8,14 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
+import org.springframework.stereotype.Component;
+
 
 
 public class CSVParser implements Parser {
     public List<Product> parse(String text)
     {
+        System.out.println();
         List<Product> productsList = new ArrayList<>();
 
         String[] lines = text.split("\n");
